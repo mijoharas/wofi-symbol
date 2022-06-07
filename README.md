@@ -14,5 +14,5 @@ Add a shortcut key in your [sway](https://swaywm.org/) config:
 ```
 # ~/.config/sway/config
 
-bindsym Mod4+e exec path/to/wofi-emoji
+bindsym Mod4+e exec path/to/wofi-symbol
 ```
