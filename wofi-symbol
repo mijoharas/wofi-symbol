@@ -2,11 +2,12 @@
 wtype 0
 if [ $? -eq 0 ]
 then
-    sed '1,/^### DATA ###$/d' $0 | wofi --show dmenu -i | cut -d ' ' -f 1 | tr -d '\n' | wtype -
+  sed '1,/^### DATA ###$/d' $0 | /home/michael/scripts/wofi/build/wofi --show dmenu -i --matching multi-contains | cut -d ' ' -f 1 | tr -d '\n' | wtype -
 else
-    sed '1,/^### DATA ###$/d' $0 | wofi --show dmenu -i | cut -d ' ' -f 1 | tr -d '\n' | wl-copy
+  sed '1,/^### DATA ###$/d' $0 | /home/michael/scripts/wofi/build/wofi --show dmenu -i --matching multi-contains | cut -d ' ' -f 1 | tr -d '\n' | wl-copy
 fi
 exit
+
 # ascii and extended ascii special symbols
 # https://docs.oracle.com/cd/E29584_01/webhelp/mdex_basicDev/src/rbdv_chars_mapping.html
 ### DATA ###
