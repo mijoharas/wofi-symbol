@@ -2,9 +2,9 @@
 wtype 0
 if [ $? -eq 0 ]
 then
-  sed '1,/^### DATA ###$/d' $0 | /home/michael/scripts/wofi/build/wofi --show dmenu -i --matching multi-contains | cut -d ' ' -f 1 | tr -d '\n' | wtype -
+  sed '1,/^### DATA ###$/d' $0 | wofi --show dmenu -i --matching multi-contains | cut -d ' ' -f 1 | tr -d '\n' | wtype -
 else
-  sed '1,/^### DATA ###$/d' $0 | /home/michael/scripts/wofi/build/wofi --show dmenu -i --matching multi-contains | cut -d ' ' -f 1 | tr -d '\n' | wl-copy
+  sed '1,/^### DATA ###$/d' $0 | wofi --show dmenu -i --matching multi-contains | cut -d ' ' -f 1 | tr -d '\n' | wl-copy
 fi
 exit
 
@@ -201,4 +201,4 @@ exit
 Ž capital Z caron accent
 ž small z caron accent
 ſ small long s
-™ small trademark symbol
+™ small trademark tm symbol
